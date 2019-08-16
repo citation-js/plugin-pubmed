@@ -19,7 +19,8 @@ It can then be used in two ways. PubMed Central identifiers are easy to recogniz
 and the following code can be used:
 
 ```js
-citejs = require('@citation-js/pubmed')
+require('@citation-js/plugin-csl')
+citejs = require('@citation-js/plugin-pubmed')
 
 citejs.Cite.async('PMC6613236')
   .then(Cite =>
@@ -32,7 +33,8 @@ For PubMed identifiers, which are just numbers, one way is to just tell it is a
 PubMed identifier:
 
 ```js
-citejs = require('@citation-js/pubmed')
+require('@citation-js/plugin-csl')
+citejs = require('@citation-js/plugin-pubmed')
 
 citejs.Cite.async('31209238', {forceType: '@pubmed/id'})
   .then(Cite =>
