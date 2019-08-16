@@ -1,5 +1,4 @@
 import { utils } from '@citation-js/core'
-import config from './config'
 
 export const ref = '@pubmed'
 export const formats = {
@@ -8,10 +7,6 @@ export const formats = {
     parseAsync (id) {
       const url = `https://example.com/api/${id}`
       const headers = {}
-
-      if (config.apiToken) {
-        headers.Authorization = `token ${config.apiToken}`
-      }
 
       return utils.fetchFileAsync(url, { headers })
     },
