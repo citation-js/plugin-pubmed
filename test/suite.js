@@ -304,6 +304,7 @@ const apiTests = [
 
 describe('pubmed', function () {
   describe('api', function () {
+    this.timeout(4000)
     for (let { name, input, output } of apiTests) {
       it(name, async function () {
         assert.deepStrictEqual(await plugins.input.chainAsync(input, { generateGraph: false }), output)
