@@ -5,28 +5,26 @@ export const formats = {
   // fetch from API
   '@pubmed/id': {
     parseAsync (id) {
-      const url = `https://example.com/api/${id}`
+      const url = `https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pubmed/?format=csl&id=${id}`
       const headers = {}
 
       return utils.fetchFileAsync(url, { headers })
     },
     parseType: {
       dataType: 'String',
-      predicate: /^Q\d+$/
+      predicate: /^pmid:\d+$/
     }
   },
+  '@pubmed/pmcid': {{
+    parseAsync (id) {
+      const url = `https://api.ncbi.nlm.nih.gov/lit/ctxp/v1/pmc/?format=csl&id=${id}`
+      const headers = {}
 
-  // translate to CSL-JSON
-  '@pubmed/record': {
-    parse (record) {
-
+      return utils.fetchFileAsync(url, { headers })
     },
     parseType: {
-      dataType: 'SimpleObject',
-      propertyConstraint: {
-        props: 'source',
-        value: 'https://example.com'
-      }
+      dataType: 'String',
+      predicate: /^PMC\d+$/
     }
   }
 }
