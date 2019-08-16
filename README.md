@@ -15,6 +15,31 @@ Install the plugin by `require`-ing it:
 require('@citation-js/plugin-pubmed')
 ```
 
+It can then be used in two ways. PubMed Central identifiers are easy to recognize
+and the following code can be used:
+
+```js
+citejs = require('@citation-js/pubmed')
+
+citejs.Cite.async('PMC6613236')
+  .then(Cite =>
+    console.log(Cite.format('bibliography', {template: 'vancouver'}))
+  )
+
+```
+
+For PubMed identifiers, which are just numbers, one way is to just tell it is a
+PubMed identifier:
+
+```js
+citejs = require('@citation-js/pubmed')
+
+citejs.Cite.async('31209238', {forceType: '@pubmed/id'})
+  .then(Cite =>
+    console.log(Cite.format('bibliography', {template: 'vancouver'}))
+  )
+```
+
 ## Formats
 
 Formats and other features added by this plugin.
