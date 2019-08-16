@@ -1,6 +1,6 @@
 {
   "name": "@citation-js/plugin-pubmed",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Citation.js plugin for PubMed and PubMed Central.",
   "main": "lib/index.js",
   "scripts": {
