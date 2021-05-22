@@ -7,9 +7,11 @@
     "test": "mocha -r @babel/register -R spec test/suite.js",
     "babel": "babel src -d lib --copy-files",
     "lint": "standard \"src/**/*.js\" \"test/**/*.js\"",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "coverage": "NODE_ENV=coverage nyc npm test",
     "report": "nyc report --reporter=lcov > coverage.lcov",
     "prepare": "npm run babel",
+    "version": "npm run changelog",
     "preversion": "npm run lint && npm run test"
   },
   "repository": {
@@ -50,6 +52,7 @@
     "@babel/register": "^7.0.0",
     "@citation-js/core": "^0.5.1",
     "babel-plugin-istanbul": "^6.0.0",
+    "conventional-changelog-cli": "^2.1.1",
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "standard": "^16.0.3"
