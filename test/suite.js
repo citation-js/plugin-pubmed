@@ -11,15 +11,15 @@ const apiTests = [
     input: 'pmid:31209238',
     output: [{
       source: 'PubMed',
-      accessed: {
-        'date-parts': [
-          [
-            2019,
-            8,
-            16
-          ]
-        ]
-      },
+      // accessed: {
+      //   'date-parts': [
+      //     [
+      //       2019,
+      //       8,
+      //       16
+      //     ]
+      //   ]
+      // },
       id: 'pmid:31209238',
       title: 'Community assessment to advance computational prediction of cancer drug combinations in a pharmacogenomic screen',
       author: [
@@ -158,15 +158,15 @@ const apiTests = [
     input: 'PMC6572829',
     output: [{
       source: 'PubMed',
-      accessed: {
-        'date-parts': [
-          [
-            2019,
-            8,
-            16
-          ]
-        ]
-      },
+      // accessed: {
+      //   'date-parts': [
+      //     [
+      //       2019,
+      //       8,
+      //       16
+      //     ]
+      //   ]
+      // },
       id: 'pmid:31209238',
       title: 'Community assessment to advance computational prediction of cancer drug combinations in a pharmacogenomic screen',
       author: [
@@ -307,7 +307,9 @@ describe('pubmed', function () {
     this.timeout(4000)
     for (const { name, input, output } of apiTests) {
       it(name, async function () {
-        assert.deepStrictEqual(await plugins.input.chainAsync(input, { generateGraph: false }), output)
+        const observed = await plugins.input.chainAsync(input, { generateGraph: false })
+        for (const item of observed) { delete item.accessed }
+        assert.deepStrictEqual(observed, output)
       })
     }
   })
