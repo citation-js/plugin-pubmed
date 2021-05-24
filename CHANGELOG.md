@@ -17,4 +17,6 @@
 # 0.1.0 (2019-08-16)
 
 
+### Features
 
+* **pubmed, pmc:** support PubMed, PMC identifiers ([87f9379](https://github.com/citation-js/plugin-pubmed/commit/87f93797b5476ef3d1187bb5ac09e76dadbed2d0))

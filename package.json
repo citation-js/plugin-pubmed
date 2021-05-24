@@ -7,7 +7,7 @@
     "test": "mocha -r @babel/register -R spec test/suite.js",
     "babel": "babel src -d lib --copy-files",
     "lint": "standard \"src/**/*.js\" \"test/**/*.js\"",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "coverage": "NODE_ENV=coverage nyc npm test",
     "report": "nyc report --reporter=lcov > coverage.lcov",
     "prepare": "npm run babel",
