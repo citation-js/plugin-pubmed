@@ -133,7 +133,7 @@ const apiTests = [
       ],
       'container-title-short': 'Nat Commun',
       'container-title': 'Nature communications',
-      publisher: 'Nature Publishing Group UK',
+      'publisher-place': 'England',
       ISSN: '2041-1723',
       issued: {
         'date-parts': [
@@ -280,7 +280,7 @@ const apiTests = [
       ],
       'container-title-short': 'Nat Commun',
       'container-title': 'Nature communications',
-      publisher: 'Nature Publishing Group UK',
+      'publisher-place': 'England',
       ISSN: '2041-1723',
       issued: {
         'date-parts': [
