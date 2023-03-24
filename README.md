@@ -1,6 +1,11 @@
 This plugin makes use of the [Literature Citation Exporter](https://api.ncbi.nlm.nih.gov/lit/ctxp) web service,
 which takes a PubMed or PubMed Central identifier and returns CSL.
 
+> In 2022, NCBI added a rate limit to the API that this plugin uses to get metadata
+> from PubMed Central and PubMed identifiers. This rate limit forbids concurrent
+> requests, and allows no more than 3 requests per second. For more information,
+> see https://api.ncbi.nlm.nih.gov/lit/ctxp/.
+
 ## Install
 
 ```js
