@@ -58,6 +58,6 @@
     "standard": "^17.0.0"
   },
   "peerDependencies": {
-    "@citation-js/core": ">=0.5.1 <=0.8"
+    "@citation-js/core": ">=0.5.1 <0.8"
   }
 }
