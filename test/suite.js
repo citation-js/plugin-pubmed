@@ -1,9 +1,7 @@
-/* eslint-env mocha */
-
-import '../src/'
-
-import assert from 'assert'
+import assert from 'node:assert'
+import { describe, it } from 'node:test'
 import { plugins } from '@citation-js/core'
+import '../src/index.js'
 
 const apiTests = [
   {
@@ -304,9 +302,8 @@ const apiTests = [
 
 describe('pubmed', function () {
   describe('api', function () {
-    this.timeout(4000)
     for (const { name, input, output } of apiTests) {
-      it(name, async function () {
+      it(name, { timeout: 4000 }, async function () {
         const observed = await plugins.input.chainAsync(input, { generateGraph: false })
         for (const item of observed) { delete item.accessed }
         assert.deepStrictEqual(observed, output)

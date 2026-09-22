@@ -1,3 +1,5 @@
+# @citation-js/plugin-pubmed
+
 This plugin makes use of the [Literature Citation Exporter](https://api.ncbi.nlm.nih.gov/lit/ctxp) web service,
 which takes a PubMed or PubMed Central identifier and returns CSL.
 
@@ -5,6 +7,11 @@ which takes a PubMed or PubMed Central identifier and returns CSL.
 > from PubMed Central and PubMed identifiers. This rate limit forbids concurrent
 > requests, and allows no more than 3 requests per second. For more information,
 > see https://api.ncbi.nlm.nih.gov/lit/ctxp/.
+
+[![NPM version](https://img.shields.io/npm/v/@citation-js/plugin-pubmed.svg)](https://npmjs.org/package/@citation-js/plugin-pubmed)
+[![Codecov](https://img.shields.io/codecov/c/gh/citation-js/plugin-pubmed)](https://app.codecov.io/gh/citation-js/plugin-pubmed)
+[![NPM total downloads](https://img.shields.io/npm/dt/@citation-js/plugin-pubmed.svg)](https://npmcharts.com/compare/@citation-js%2Fplugin-pubmed?minimal=true)
+![License](https://img.shields.io/npm/l/@citation-js/plugin-pubmed.svg)
 
 ## Install
 
@@ -14,7 +21,11 @@ npm install @citation-js/plugin-pubmed
 
 ## Use
 
-Install the plugin by `require`-ing it:
+```js
+import '@citation-js/plugin-pubmed'
+```
+
+Or install the plugin by `require`-ing it:
 
 ```js
 require('@citation-js/plugin-pubmed')
