@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/citation-js/plugin-pubmed/compare/v0.3.0...v0.4.0) (2026-09-22)
+
+* chore!: update to Node.js v22+ ([1f129b7](https://github.com/citation-js/plugin-pubmed/commit/1f129b782646779ab827f8ddcf18fa3b3641e537))
+
+### BREAKING CHANGES
+
+* drop support for Node.js v14-v20
+
 # [0.3.0](https://github.com/citation-js/plugin-pubmed/compare/v0.2.1...v0.3.0) (2023-03-24)
 
 
